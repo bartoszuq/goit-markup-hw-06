@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="css/modern-normalize.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>goit-markup-hw-04</title>
+    <title>goit-markup-hw-05</title>
   </head>
   <body>
     <div class="line">
@@ -27,16 +27,12 @@
             <ul class="navbar__items">
               <li class="navbar__item">
                 <!-- LINKS -->
-                <a
-                  href="index.html"
-                  class="link index__agency-link navbar__content"
+                <a href="index.html" class="link page--active navbar__content"
                   >Agencja</a
                 >
               </li>
               <li class="navbar__item">
-                <a
-                  href="portfolio.html"
-                  class="link index__portfolio-link navbar__content"
+                <a href="portfolio.html" class="link navbar__content"
                   >Portfolio</a
                 >
               </li>
@@ -58,7 +54,7 @@
           </li>
           <li class="contact__item">
             <a href="tel:48111111111" class="contact tel">
-              <svg width="10px" height="16px">
+              <svg class="icon-contacts__svg" width="10px" height="16px">
                 <use href="images/icons.svg#icon-smartphone"></use>
               </svg>
               +48 111 111 111</a
@@ -75,7 +71,7 @@
             EFEKTYWNE ROZWIĄZANIA <br />
             DLA WASZEGO BIZNESU
           </h1>
-          <button type="button" class="button_order-service">
+          <button type="button" class="button_order-service" data-modal-open>
             Zamów usługe
           </button>
         </div>
@@ -141,27 +137,33 @@
         <ul class="about-us__items">
           <li class="about-us__item">
             <img
+              class="img--block"
               src="images/about-us/programming.jpg"
               alt="programista wprowadzający kod pisząc na klawiaturze"
               width="370"
               height="294"
             />
+            <div class="about-us__inside-block">aplikacje komputerowe</div>
           </li>
           <li class="about-us__item">
             <img
+              class="img--block"
               src="images/about-us/app-development.jpg"
               alt="pracownica trzymająca telefon i przedstawiająca przentacje na laptopie"
               width="370"
               height="294"
             />
+            <div class="about-us__inside-block">aplikacje mobilne</div>
           </li>
           <li class="about-us__item">
             <img
+              class="img--block"
               src="images/about-us/color-design.jpg"
               alt="developerka trzymająca tablet przedstawiający paletę barw"
               width="370"
               height="294"
             />
+            <div class="about-us__inside-block">rozwiązania graficzne</div>
           </li>
         </ul>
       </section>
@@ -336,7 +338,7 @@
       </section>
       <!------------------ OUR CUSTOMERS ------------------>
       <section class="our-customers container section">
-        <h2 class="our-customers__heading text--center">Nasi Klienci</h2>
+        <h2 class="our-customers__heading text--center">Nasi klienci</h2>
         <ul class="our-customers__items">
           <li class="our-customers__item">
             <a class="our-customers__link" href="#">
@@ -455,5 +457,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal__button--close" data-modal-close>
+          <svg class="modal__svg--close" width="11px" height="11px">
+            <use href="images/icons.svg#close-icon"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </body>
+  <script src="./modal.js"></script>
 </html>

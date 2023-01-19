@@ -12,7 +12,7 @@
     />
     <link rel="stylesheet" href="css/modern-normalize.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>goit-markup-hw-04 - Portfolio</title>
+    <title>goit-markup-hw-05 - Portfolio</title>
   </head>
   <body>
     <div class="line">
@@ -21,20 +21,17 @@
           <a href="index.html" class="logo logo--primary navbar__content"
             ><span class="logo-design--color">Web</span>Studio</a
           >
-
+          <!-- NAVBAR -->
           <nav class="navbar">
             <ul class="navbar__items">
               <li class="navbar__item">
-                <a
-                  href="index.html"
-                  class="link portfolio__agency-link navbar__content"
-                  >Agencja</a
-                >
+                <!-- LINKS -->
+                <a href="index.html" class="link navbar__content">Agencja</a>
               </li>
               <li class="navbar__item">
                 <a
                   href="portfolio.html"
-                  class="link portfolio__portfolio-link navbar__content"
+                  class="link page--active navbar__content"
                   >Portfolio</a
                 >
               </li>
@@ -44,14 +41,23 @@
             </ul>
           </nav>
         </div>
+        <!-- CONTACTS -->
         <ul class="contacts">
           <li class="contact__item">
-            <a href="mailto:info@devstudio.com" class="contact email"
-              >info@devstudio.com</a
+            <a href="mailto:info@devstudio.com" class="contact email">
+              <svg class="icon-contacts__svg" width="16px" height="12px">
+                <use href="images/icons.svg#icon-envelope"></use>
+              </svg>
+              info@devstudio.com</a
             >
           </li>
           <li class="contact__item">
-            <a href="tel:48111111111" class="contact tel">+48 111 111 111</a>
+            <a href="tel:48111111111" class="contact tel">
+              <svg width="10px" height="16px">
+                <use href="images/icons.svg#icon-smartphone"></use>
+              </svg>
+              +48 111 111 111</a
+            >
           </li>
         </ul>
       </header>
@@ -69,19 +75,22 @@
       <div class="main-content">
         <ul class="filter-results">
           <li class="filter-result">
-            <img
-              class="img--block"
-              src="images/portfolio/portfolio1.jpg"
-              alt="laptop z otwartą naszą stroną internetową"
-              width="370"
-              height="294"
-            />
-
+            <div class="extra-info--blue__container">
+              <div class="extra-info--blue"></div>
+              <img
+                class="img--block"
+                src="images/portfolio/portfolio1.jpg"
+                alt="laptop z otwartą naszą stroną internetową"
+                width="370"
+                height="294"
+              />
+            </div>
             <div class="picture__info">
               <div class="picture__heading">Technocrack</div>
               <p class="picture__description">Strona internetowa</p>
             </div>
           </li>
+
           <li class="filter-result">
             <img
               class="img--block"
