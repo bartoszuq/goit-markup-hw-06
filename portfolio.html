@@ -89,7 +89,6 @@
                   rozpowszechniania koronawirusa. Firmy wykorzystują tę
                   platformę do celów szpiegowskich i ataków na niezabezpieczone
                   serwery konkurencji
-                  </p> 
                 </p>
               </div>
             </div>
@@ -274,8 +273,8 @@
     <!------------------ FOOTER ------------------>
     <footer id="footer" class="footer section">
       <div class="container">
-        <div class="footer__items">
-          <div class="footer__item">
+        <ul class="footer__items">
+          <li class="footer__item">
             <!-- LOGO -->
             <a href="index.html" class="logo footer__logo"
               ><span class="logo-design--color">Web</span>Studio</a
@@ -302,12 +301,10 @@
                 </li>
               </ul>
             </address>
-          </div>
-          <div class="footer__item">
+          </li>
+          <li class="footer__item">
             <div class="join-us">
-              <div class="join-us__heading">
-                <p>DOŁĄCZ DO NAS</p>
-              </div>
+              <p class="join-us__heading form__headings">DOŁĄCZ DO NAS</p>
               <ul class="social-links">
                 <li class="social-links__logo instagram--icon">
                   <a class="social-links__link" href="#">
@@ -339,8 +336,30 @@
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
+          </li>
+          <li class="footer-item">
+            <div class="sign-up-newsletter">
+              <p class="sign-up-newsletter__heading form__headings">
+                ZAPISZ SIĘ DO NEWSLETTERA
+              </p>
+              <form class="newsletter__form">
+                <input
+                  class="newsletter__input"
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                  required
+                />
+                <button type="submit" class="sign-up__button">
+                  Zapisz się
+                  <svg class="icon-send" width="24px" height="24px">
+                    <use href="/images/icons.svg#icon-send"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </li>
+        </ul>
       </div>
     </footer>
   </body>

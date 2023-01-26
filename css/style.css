@@ -143,7 +143,7 @@ ul {
   letter-spacing: 0.06em;
   text-align: center;
 }
-.post-header .button_order-service {
+.button_order-service {
   background-color: #2196f3;
   color: white;
   border: none;
@@ -155,6 +155,11 @@ ul {
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button_order-service:hover {
+  background-color: #1b73bb;
 }
 .our-skills.section {
   padding-bottom: 0;
@@ -446,10 +451,9 @@ button:not(:last-child) {
   padding: 60px 0;
 }
 .join-us {
-  display: flex;
-  flex-direction: column;
+  margin-right: 78px;
 }
-.join-us__heading {
+.form__headings {
   margin-bottom: 20px;
   font-size: 14px;
   font-weight: 700;
@@ -470,6 +474,62 @@ button:not(:last-child) {
 .footer .social-links__link:hover {
   fill: white;
   background: #2196f3;
+}
+.sign-up-newsletter {
+}
+.sign-up-newsletter__heading {
+}
+.newsletter__input {
+  background-color: #2196f300;
+  color: white;
+  outline: none;
+  padding: 15px;
+  width: 358px;
+
+  border: 1px solid #ffffff4d;
+  border-radius: 4px;
+
+  box-shadow: 0px 4px 4px 0px #00000026;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.newsletter__input::placeholder {
+  color: #ffffff99;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+}
+.newsletter__input:focus {
+  border-color: #2196f3;
+}
+.sign-up__button {
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+
+  background-color: #2196f3;
+  color: white;
+
+  padding: 10px 28px 10px 42px;
+  width: 200px;
+  height: 50px;
+
+  white-space: nowrap;
+
+  border: none;
+  border-radius: 4px;
+
+  box-shadow: 0px 4px 4px 0px #00000026;
+}
+.newsletter__form {
+  display: flex;
+  gap: 12px;
 }
 
 /*--------------- modal window ---------------*/
@@ -502,38 +562,33 @@ button:not(:last-child) {
   transform: translateY(-150%);
 }
 
+.form__transitions {
+  transition: transform 800ms ease, opacity 1000ms ease;
+}
 .input-heading.name {
-  transform: translateY(0%);
-  transition: transform 800ms ease 0.2s, opacity 1000ms ease 0.2s;
+  transition-delay: 0.2s, 0.2s;
 }
 .input-heading.telephone {
-  transform: translateY(0%);
-  transition: transform 800ms ease 0.3s, opacity 1000ms ease 0.3s;
+  transition-delay: 0.3s, 0.3s;
 }
 .input-heading.email {
-  transform: translateY(0%);
-  transition: transform 800ms ease 0.4s, opacity 1000ms ease 0.4s;
+  transition-delay: 0.4s, 0.4s;
 }
 .input-heading.text {
-  transform: translateY(0%);
-  transition: transform 800ms ease 0.5s, opacity 1000ms ease 0.5s;
+  transition-delay: 0.5s, 0.5s;
 }
 /* - */
 .animate-inputs__container.name {
-  transform: translateY(0%);
-  transition: transform 800ms ease 0.2s, opacity 1000ms ease 0.2s;
+  transition-delay: 0.2s, 0.2s;
 }
 .animate-inputs__container.telephone {
-  transform: translateY(0%);
-  transition: transform 800ms ease 0.3s, opacity 1000ms ease 0.3s;
+  transition-delay: 0.3s, 0.3s;
 }
 .animate-inputs__container.email {
-  transform: translateY(0%);
-  transition: transform 800ms ease 0.4s, opacity 1000ms ease 0.4s;
+  transition-delay: 0.4s, 0.4s;
 }
 .animate-inputs__container.text {
-  transform: translateY(0%);
-  transition: transform 700ms ease 0.45s, opacity 1000ms ease 0.45s;
+  transition-delay: 0.45s, 0.45s;
 }
 /* -------------- !!! ANIMATE SECTION - END !!! -------------- */
 .backdrop {
@@ -549,10 +604,10 @@ button:not(:last-child) {
 
   background-color: #00000033;
 
-  transition: visibility 400ms linear, opacity 200ms ease;
+  transition: visibility 400ms ease-in, opacity 200ms ease;
 }
 .modal {
-  position: absolute;
+  position: relative;
 
   width: 528px;
   height: 581px;
@@ -603,7 +658,6 @@ button:not(:last-child) {
   line-height: 1.15;
   letter-spacing: 0.03em;
 
-  transform: translateY(0%);
   transition: transform 800ms ease 0.2s, opacity 1000ms ease 0.2s;
 }
 .modal__svg--icon {
@@ -660,8 +714,27 @@ button:not(:last-child) {
 .comment-section::placeholder {
   color: #75757580;
 
-  transform: translateY(0%);
   transition: transform 1000ms ease, opacity 1000ms ease;
+}
+.rules-checkbox {
+  appearance: none;
+}
+.rules-checkbox::before {
+  content: "";
+  display: block;
+  cursor: pointer;
+
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid #212121;
+  border-radius: 2px;
+}
+.rules-checkbox:checked.rules-checkbox::before {
+  background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' width='34' height='32' viewBox='0 0 34 32'%3E%3Ctitle%3Eicon-check%3C/title%3E%3Cpath fill='%232196f3' d='M4.267 0h25.6c2.356 0 4.267 1.91 4.267 4.267v23.467c0 2.356-1.91 4.267-4.267 4.267h-25.6c-2.356 0-4.267-1.91-4.267-4.267v-23.467c0-2.356 1.91-4.267 4.267-4.267z'%3E%3C/path%3E%3Cpath fill='%23fff' stroke='%23fff' stroke-linejoin='miter' stroke-linecap='butt' stroke-miterlimit='4' stroke-width='0.4267' d='M8.442 16.537l-0.147-0.14-2.205 2.088 7.767 7.41 16.318-15.567-2.19-2.089-14.128 13.465-5.416-5.167z'%3E%3C/path%3E%3C/svg%3E%0A");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
 }
 .rules-acceptation {
   color: #757575;
@@ -677,8 +750,10 @@ button:not(:last-child) {
 
   margin-bottom: 30px;
 
-  transform: translateY(0%);
-  transition: transform 700ms ease 0.65s, opacity 1000ms ease 0.65s;
+  transition-delay: 0.65s, 0.65s;
+}
+.rules-acceptation--label {
+  cursor: pointer;
 }
 .rules-acceptation__link {
   color: #2196f3;
@@ -702,8 +777,7 @@ button:not(:last-child) {
   cursor: pointer;
   box-shadow: 0px 4px 4px 0px #00000026;
 
-  transform: translateY(0%);
-  transition: transform 700ms ease 0.7s, opacity 1000ms ease 0.7s;
+  transition-delay: 0.7s, 0.7s;
 }
 .form__container {
   position: relative;
