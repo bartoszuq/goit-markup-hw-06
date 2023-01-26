@@ -161,6 +161,9 @@ ul {
 .button_order-service:hover {
   background-color: #1b73bb;
 }
+.button_order-service:active {
+  background-color: #1663a3;
+}
 .our-skills.section {
   padding-bottom: 0;
   gap: 30px;
@@ -475,10 +478,6 @@ button:not(:last-child) {
   fill: white;
   background: #2196f3;
 }
-.sign-up-newsletter {
-}
-.sign-up-newsletter__heading {
-}
 .newsletter__input {
   background-color: #2196f300;
   color: white;
@@ -526,6 +525,14 @@ button:not(:last-child) {
   border-radius: 4px;
 
   box-shadow: 0px 4px 4px 0px #00000026;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sign-up__button:hover {
+  background-color: #1b73bb;
+}
+.sign-up__button:active {
+  background-color: #1663a3;
 }
 .newsletter__form {
   display: flex;
