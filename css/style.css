@@ -457,6 +457,7 @@ button:not(:last-child) {
   margin-right: 78px;
 }
 .form__headings {
+  display: block;
   margin-bottom: 20px;
   font-size: 14px;
   font-weight: 700;

@@ -454,15 +454,19 @@
           </li>
           <li class="footer-item">
             <div class="sign-up-newsletter">
-              <p class="sign-up-newsletter__heading form__headings">
+              <label
+                class="sign-up-newsletter__heading form__headings"
+                for="sign-up"
+              >
                 ZAPISZ SIĘ DO NEWSLETTERA
-              </p>
+              </label>
               <form class="newsletter__form">
                 <input
                   class="newsletter__input"
                   type="email"
                   name="email address"
                   placeholder="E-mail"
+                  id="sign-up"
                   required
                 />
                 <button type="submit" class="sign-up__button">
